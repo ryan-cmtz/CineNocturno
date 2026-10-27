@@ -30,7 +30,7 @@
         <section class="encabezado">
             <div class="container py-4">
                 <h1>Catálogo de películas</h1>
-                <p>Busca una película o selecciona un género.</p>
+                <p>32 películas en cuatro categorías. Busca por título o filtra por género.</p>
             </div>
         </section>
 
@@ -44,42 +44,279 @@
                     <label for="filtroGenero" class="form-label">Filtrar por género</label>
                     <select class="form-select campo-oscuro" id="filtroGenero">
                         <option value="todos">Todos los géneros</option>
-                        <option value="comedia">Comedia</option>
+                        <option value="terror">Terror y suspenso</option>
                         <option value="fantasia">Fantasía oscura</option>
                         <option value="animacion">Animación gótica</option>
+                        <option value="comedia">Comedia de terror</option>
                     </select>
                 </div>
             </div>
 
-            <p id="mensajeCatalogo" role="status" aria-live="polite">Se muestran 3 películas.</p>
+            <p id="mensajeCatalogo" role="status" aria-live="polite">Se muestran 32 películas.</p>
             <p id="mensajeFavoritas" role="status" aria-live="polite"></p>
 
             <div class="row g-4" id="listaPeliculas">
-                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="comedia" data-titulo="scary movie comedia terror">
+                <!-- Terror y suspenso -->
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="terror" data-titulo="el-resplandor terror">
                     <div class="tarjeta h-100">
-                        <img src="img/scarymovie.jpg" alt="Imagen de Scary Movie" class="img-fluid imagen-tarjeta" loading="lazy">
-                        <p class="genero">Comedia</p>
-                        <h2>Scary Movie</h2>
-                        <p>Un grupo de jóvenes queda envuelto en una parodia de las historias de terror más conocidas.</p>
-                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Scary Movie">Guardar en favoritas</button>
+                        <img src="img/el-resplandor.jpg" alt="Imagen de El resplandor" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Terror y suspenso</p><h2>El resplandor</h2>
+                        <p>Jack acepta cuidar un hotel aislado durante el invierno con su familia. El encierro y las presencias del lugar empiezan a afectarlo.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="El resplandor" aria-pressed="false">Guardar en favoritas</button>
                     </div>
                 </article>
-                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="fantasia" data-titulo="el laberinto del fauno fantasia oscura">
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="terror" data-titulo="hereditary terror">
+                    <div class="tarjeta h-100">
+                        <img src="img/hereditary.jpg" alt="Imagen de Hereditary" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Terror y suspenso</p><h2>Hereditary</h2>
+                        <p>Después de la muerte de su abuela, Annie y su familia descubren secretos que parecen perseguirlos.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Hereditary" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="terror" data-titulo="midsommar terror">
+                    <div class="tarjeta h-100">
+                        <img src="img/midsommar.jpg" alt="Imagen de Midsommar" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Terror y suspenso</p><h2>Midsommar</h2>
+                        <p>Una joven viaja con su novio y amigos a un festival de verano en Suecia, donde las costumbres del lugar se vuelven inquietantes.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Midsommar" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="terror" data-titulo="un-lugar-en-silencio terror">
+                    <div class="tarjeta h-100">
+                        <img src="img/un-lugar-en-silencio.jpg" alt="Imagen de Un lugar en silencio" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Terror y suspenso</p><h2>Un lugar en silencio</h2>
+                        <p>Una familia intenta sobrevivir en un mundo donde unas criaturas encuentran a sus víctimas por el sonido.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Un lugar en silencio" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="terror" data-titulo="halloween terror">
+                    <div class="tarjeta h-100">
+                        <img src="img/halloween.jpg" alt="Imagen de Halloween" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Terror y suspenso</p><h2>Halloween</h2>
+                        <p>Michael Myers escapa de una institución y regresa a su pueblo, donde Laurie intenta protegerse de él.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Halloween" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="terror" data-titulo="la-masacre-de-texas terror">
+                    <div class="tarjeta h-100">
+                        <img src="img/la-masacre-de-texas.jpg" alt="Imagen de La masacre de Texas" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Terror y suspenso</p><h2>La masacre de Texas</h2>
+                        <p>Un grupo de jóvenes queda varado en Texas y se encuentra con una familia violenta liderada por Leatherface.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="La masacre de Texas" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="terror" data-titulo="12-horas-para-sobrevivir terror">
+                    <div class="tarjeta h-100">
+                        <img src="img/12-horas-para-sobrevivir.jpg" alt="Imagen de 12 horas para sobrevivir" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Terror y suspenso</p><h2>12 horas para sobrevivir</h2>
+                        <p>Durante una noche en la que los delitos quedan temporalmente permitidos, una familia intenta mantenerse a salvo.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="12 horas para sobrevivir" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="terror" data-titulo="el-telefono-negro terror">
+                    <div class="tarjeta h-100">
+                        <img src="img/el-telefono-negro.jpg" alt="Imagen de El teléfono negro" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Terror y suspenso</p><h2>El teléfono negro</h2>
+                        <p>Un adolescente secuestrado encuentra un teléfono desconectado en el sótano y comienza a recibir llamadas misteriosas.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="El teléfono negro" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+
+                <!-- Fantasía oscura -->
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="fantasia" data-titulo="el-laberinto-del-fauno fantasia">
                     <div class="tarjeta h-100">
                         <img src="img/fauno.jpg" alt="Imagen de El laberinto del fauno" class="img-fluid imagen-tarjeta" loading="lazy">
-                        <p class="genero">Fantasía oscura</p>
-                        <h2>El laberinto del fauno</h2>
-                        <p>Ofelia encuentra un laberinto y conoce a un fauno que le propone superar varias pruebas.</p>
-                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="El laberinto del fauno">Guardar en favoritas</button>
+                        <p class="genero">Fantasía oscura</p><h2>El laberinto del fauno</h2>
+                        <p>Ofelia descubre un laberinto y conoce a un fauno que le propone superar tres pruebas en un mundo fantástico.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="El laberinto del fauno" aria-pressed="false">Guardar en favoritas</button>
                     </div>
                 </article>
-                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="animacion" data-titulo="el cadaver de la novia animacion gotica">
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="fantasia" data-titulo="sleepy-hollow fantasia">
+                    <div class="tarjeta h-100">
+                        <img src="img/sleepy-hollow.jpg" alt="Imagen de Sleepy Hollow" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Fantasía oscura</p><h2>Sleepy Hollow</h2>
+                        <p>Ichabod Crane llega a Sleepy Hollow para investigar muertes atribuidas a un jinete sin cabeza.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Sleepy Hollow" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="fantasia" data-titulo="constantine fantasia">
+                    <div class="tarjeta h-100">
+                        <img src="img/constantine.jpg" alt="Imagen de Constantine" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Fantasía oscura</p><h2>Constantine</h2>
+                        <p>John Constantine, investigador de lo sobrenatural, ayuda a una detective con un caso relacionado con fuerzas del más allá.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Constantine" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="fantasia" data-titulo="la-forma-del-agua fantasia">
+                    <div class="tarjeta h-100">
+                        <img src="img/la-forma-del-agua.jpg" alt="Imagen de La forma del agua" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Fantasía oscura</p><h2>La forma del agua</h2>
+                        <p>Elisa, trabajadora de limpieza en un laboratorio, descubre una criatura acuática y forma un vínculo con ella.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="La forma del agua" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="fantasia" data-titulo="un-monstruo-viene-a-verme fantasia">
+                    <div class="tarjeta h-100">
+                        <img src="img/un-monstruo-viene-a-verme.jpg" alt="Imagen de Un monstruo viene a verme" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Fantasía oscura</p><h2>Un monstruo viene a verme</h2>
+                        <p>Conor atraviesa una situación familiar difícil y recibe la visita de un monstruo que le cuenta historias.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Un monstruo viene a verme" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="fantasia" data-titulo="la-cumbre-escarlata fantasia">
+                    <div class="tarjeta h-100">
+                        <img src="img/la-cumbre-escarlata.jpg" alt="Imagen de La cumbre escarlata" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Fantasía oscura</p><h2>La cumbre escarlata</h2>
+                        <p>Una joven escritora se muda con su esposo a una mansión antigua donde descubre secretos inquietantes.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="La cumbre escarlata" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="fantasia" data-titulo="el-espinazo-del-diablo fantasia">
+                    <div class="tarjeta h-100">
+                        <img src="img/el-espinazo-del-diablo.jpg" alt="Imagen de El espinazo del diablo" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Fantasía oscura</p><h2>El espinazo del diablo</h2>
+                        <p>Durante la Guerra Civil española, un niño llega a un orfanato donde un fantasma guarda un misterio.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="El espinazo del diablo" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="fantasia" data-titulo="miss-peregrine-y-el-hogar-de-los-ninos-peculiares fantasia">
+                    <div class="tarjeta h-100">
+                        <img src="img/miss-peregrine-y-el-hogar-de-los-ninos-peculiares.jpg" alt="Imagen de Miss Peregrine y el hogar de los niños peculiares" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Fantasía oscura</p><h2>Miss Peregrine y el hogar de los niños peculiares</h2>
+                        <p>Jacob descubre un hogar donde viven niños con habilidades extraordinarias y un secreto relacionado con el tiempo.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Miss Peregrine y el hogar de los niños peculiares" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+
+                <!-- Animación gótica -->
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="animacion" data-titulo="el-cadaver-de-la-novia animacion">
                     <div class="tarjeta h-100">
                         <img src="img/cadaver.jpg" alt="Imagen de El cadáver de la novia" class="img-fluid imagen-tarjeta" loading="lazy">
-                        <p class="genero">Animación gótica</p>
-                        <h2>El cadáver de la novia</h2>
-                        <p>Victor llega por accidente al mundo de los muertos y conoce a Emily, una novia cadáver.</p>
-                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="El cadáver de la novia">Guardar en favoritas</button>
+                        <p class="genero">Animación gótica</p><h2>El cadáver de la novia</h2>
+                        <p>Victor practica sus votos en el bosque y despierta por accidente a Emily, una novia del mundo de los muertos.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="El cadáver de la novia" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="animacion" data-titulo="9 animacion">
+                    <div class="tarjeta h-100">
+                        <img src="img/9.jpg" alt="Imagen de 9" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Animación gótica</p><h2>9</h2>
+                        <p>En un mundo sin personas, un pequeño muñeco de tela despierta y se une a otros para enfrentar máquinas peligrosas.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="9" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="animacion" data-titulo="coraline-y-la-puerta-secreta animacion">
+                    <div class="tarjeta h-100">
+                        <img src="img/coraline-y-la-puerta-secreta.jpg" alt="Imagen de Coraline y la puerta secreta" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Animación gótica</p><h2>Coraline y la puerta secreta</h2>
+                        <p>Coraline encuentra una puerta a una versión distinta de su hogar, donde algo no es lo que parece.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Coraline y la puerta secreta" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="animacion" data-titulo="paranorman animacion">
+                    <div class="tarjeta h-100">
+                        <img src="img/paranorman.jpg" alt="Imagen de ParaNorman" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Animación gótica</p><h2>ParaNorman</h2>
+                        <p>Norman puede hablar con fantasmas y debe ayudar a su pueblo cuando despierta una antigua maldición.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="ParaNorman" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="animacion" data-titulo="frankenweenie animacion">
+                    <div class="tarjeta h-100">
+                        <img src="img/frankenweenie.jpg" alt="Imagen de Frankenweenie" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Animación gótica</p><h2>Frankenweenie</h2>
+                        <p>Victor intenta traer de vuelta a su perro Sparky con un experimento que causa problemas inesperados.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Frankenweenie" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="animacion" data-titulo="el-extrano-mundo-de-jack animacion">
+                    <div class="tarjeta h-100">
+                        <img src="img/el-extrano-mundo-de-jack.jpg" alt="Imagen de El extraño mundo de Jack" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Animación gótica</p><h2>El extraño mundo de Jack</h2>
+                        <p>Jack, el rey de Halloween, descubre la Navidad y decide organizarla a su manera.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="El extraño mundo de Jack" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="animacion" data-titulo="monster-house animacion">
+                    <div class="tarjeta h-100">
+                        <img src="img/monster-house.jpg" alt="Imagen de Monster House" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Animación gótica</p><h2>Monster House</h2>
+                        <p>Tres niños sospechan que la casa de su vecino está viva y deciden investigar lo que ocurre dentro.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Monster House" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="animacion" data-titulo="la-mecanica-del-corazon animacion">
+                    <div class="tarjeta h-100">
+                        <img src="img/la-mecanica-del-corazon.jpg" alt="Imagen de La mecánica del corazón" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Animación gótica</p><h2>La mecánica del corazón</h2>
+                        <p>Jack nace con un corazón frágil y usa un reloj para mantenerlo en marcha; al crecer, el amor pone a prueba las reglas que le enseñaron.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="La mecánica del corazón" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+
+                <!-- Comedia de terror -->
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="comedia" data-titulo="scarymovie comedia">
+                    <div class="tarjeta h-100">
+                        <img src="img/scarymovie.jpg" alt="Imagen de Scary Movie" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Comedia de terror</p><h2>Scary Movie</h2>
+                        <p>Un grupo de jóvenes se enfrenta a un misterioso asesino en una historia que parodia las películas de terror.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Scary Movie" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="comedia" data-titulo="zombieland comedia">
+                    <div class="tarjeta h-100">
+                        <img src="img/zombieland.jpg" alt="Imagen de Zombieland" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Comedia de terror</p><h2>Zombieland</h2>
+                        <p>En un mundo invadido por zombis, un joven viaja por Estados Unidos y se une a otros sobrevivientes.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Zombieland" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="comedia" data-titulo="gremlins comedia">
+                    <div class="tarjeta h-100">
+                        <img src="img/gremlins.jpg" alt="Imagen de Gremlins" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Comedia de terror</p><h2>Gremlins</h2>
+                        <p>Billy recibe una criatura llamada mogwai y debe seguir unas reglas para cuidarla; al romperlas, aparecen problemas.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Gremlins" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="comedia" data-titulo="m3gan comedia">
+                    <div class="tarjeta h-100">
+                        <img src="img/m3gan.jpg" alt="Imagen de M3GAN" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Comedia de terror</p><h2>M3GAN</h2>
+                        <p>Una ingeniera crea una muñeca con inteligencia artificial para cuidar a su sobrina, pero su protección se vuelve peligrosa.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="M3GAN" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="comedia" data-titulo="el-sofa-asesino comedia">
+                    <div class="tarjeta h-100">
+                        <img src="img/el-sofa-asesino.jpg" alt="Imagen de El sofá asesino" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Comedia de terror</p><h2>El sofá asesino</h2>
+                        <p>Un sillón antiguo parece estar poseído y desarrolla una obsesión que pone en peligro a quienes lo rodean.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="El sofá asesino" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="comedia" data-titulo="five-nights-at-freddys comedia">
+                    <div class="tarjeta h-100">
+                        <img src="img/five-nights-at-freddys.jpg" alt="Imagen de Five Nights at Freddy's" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Comedia de terror</p><h2>Five Nights at Freddy's</h2>
+                        <p>Mike acepta trabajar de noche en una pizzería abandonada y descubre que sus animatrónicos se mueven solos.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Five Nights at Freddy's" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="comedia" data-titulo="winnie-pooh-miel-y-sangre comedia">
+                    <div class="tarjeta h-100">
+                        <img src="img/winnie-pooh-miel-y-sangre.jpg" alt="Imagen de Winnie Pooh: miel y sangre" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Comedia de terror</p><h2>Winnie Pooh: miel y sangre</h2>
+                        <p>Años después de que Christopher Robin se marcha, Pooh y Piglet se vuelven violentos y amenazan a quienes visitan el bosque.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Winnie Pooh: miel y sangre" aria-pressed="false">Guardar en favoritas</button>
+                    </div>
+                </article>
+                <article class="col-12 col-sm-6 col-lg-4 tarjeta-pelicula" data-genero="comedia" data-titulo="terrifier comedia">
+                    <div class="tarjeta h-100">
+                        <img src="img/terrifier.jpg" alt="Imagen de Terrifier" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <p class="genero">Comedia de terror</p><h2>Terrifier</h2>
+                        <p>Durante Halloween, dos jóvenes se cruzan con Art the Clown, un payaso que aterroriza a quienes encuentra.</p>
+                        <button class="btn boton-secundario boton-favorita" type="button" data-pelicula="Terrifier" aria-pressed="false">Guardar en favoritas</button>
                     </div>
                 </article>
             </div>

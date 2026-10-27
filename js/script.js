@@ -1,23 +1,25 @@
-/* Muestra el año actual en el pie de cada página */
 const anios = document.querySelectorAll(".anio");
 
 anios.forEach(function(anio) {
     anio.textContent = new Date().getFullYear();
 });
 
-/* Busca y filtra las películas del catálogo */
+function quitarAcentos(texto) {
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 const buscador = document.querySelector("#buscarPelicula");
 const filtro = document.querySelector("#filtroGenero");
 const tarjetas = document.querySelectorAll(".tarjeta-pelicula");
 const mensajeCatalogo = document.querySelector("#mensajeCatalogo");
 
 function filtrarPeliculas() {
-    const texto = buscador.value.toLowerCase().trim();
+    const texto = quitarAcentos(buscador.value.toLowerCase().trim());
     const generoElegido = filtro.value;
     let cantidad = 0;
 
     tarjetas.forEach(function(tarjeta) {
-        const titulo = tarjeta.dataset.titulo.toLowerCase();
+        const titulo = quitarAcentos(tarjeta.dataset.titulo.toLowerCase());
         const genero = tarjeta.dataset.genero;
         const coincideTexto = titulo.includes(texto);
         const coincideGenero = generoElegido === "todos" || generoElegido === genero;
@@ -36,18 +38,26 @@ function filtrarPeliculas() {
 if (buscador && filtro) {
     buscador.addEventListener("input", filtrarPeliculas);
     filtro.addEventListener("change", filtrarPeliculas);
+
+    const parametros = new URLSearchParams(window.location.search);
+    const generoInicial = parametros.get("genero");
+
+    if (generoInicial) {
+        filtro.value = generoInicial;
+        filtrarPeliculas();
+    }
 }
 
-/* Guarda las películas favoritas en el navegador */
 const botonesFavoritas = document.querySelectorAll(".boton-favorita");
 const mensajeFavoritas = document.querySelector("#mensajeFavoritas");
-let favoritas = JSON.parse(localStorage.getItem("cineNocturnoFavoritas")) || [];
+let favoritas = JSON.parse(localStorage.getItem("cineNocturnoFavoritas") || "[]");
 
 function actualizarBotonFavorita(boton) {
     const pelicula = boton.dataset.pelicula;
     const guardada = favoritas.includes(pelicula);
 
     boton.classList.toggle("favorita", guardada);
+    boton.setAttribute("aria-pressed", guardada);
 
     if (guardada) {
         boton.textContent = "Quitar de favoritas";
@@ -76,7 +86,24 @@ botonesFavoritas.forEach(function(boton) {
     });
 });
 
-/* Cuenta los caracteres del mensaje de contacto */
+const listaFavoritas = document.querySelector("#listaFavoritas");
+const estadoFavoritas = document.querySelector("#estadoFavoritas");
+
+if (listaFavoritas && estadoFavoritas) {
+    if (favoritas.length === 0) {
+        estadoFavoritas.textContent = "Aún no guardaste películas favoritas.";
+    } else {
+        favoritas.forEach(function(pelicula) {
+            const elemento = document.createElement("li");
+            elemento.textContent = pelicula;
+            listaFavoritas.appendChild(elemento);
+        });
+
+        estadoFavoritas.textContent = "Estas son tus películas guardadas.";
+    }
+}
+
+
 const mensaje = document.querySelector("#mensaje");
 const contador = document.querySelector("#contador");
 
@@ -86,7 +113,6 @@ if (mensaje && contador) {
     });
 }
 
-/* Valida el formulario y muestra una respuesta */
 const formulario = document.querySelector("#formularioContacto");
 const respuesta = document.querySelector("#respuestaFormulario");
 

@@ -1,4 +1,3 @@
-/* Colores principales del sitio */
 :root {
     --fondo: #100d13;
     --superficie: #1c1721;
@@ -156,6 +155,10 @@ a {
 
 .mensaje-error {
     border-left: 5px solid var(--texto);
+}
+
+.lista-favoritas {
+    padding-left: 22px;
 }
 
 .pie {

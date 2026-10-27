@@ -30,34 +30,38 @@
         <section class="encabezado">
             <div class="container py-4">
                 <h1>Recomendaciones</h1>
-                <p>Elige una película según el tipo de historia que quieras ver.</p>
+                <p>Elige una categoría para explorar sus ocho películas.</p>
             </div>
         </section>
 
         <section class="container seccion">
             <div class="row g-4">
-                <article class="col-12 col-md-4">
+                <article class="col-12 col-md-6 col-lg-3">
                     <div class="tarjeta h-100">
-                        <img src="img/scarymovie.jpg" alt="Imagen de Scary Movie" class="img-fluid imagen-tarjeta" loading="lazy">
-                        <h2>Para reír</h2>
-                        <p>Scary Movie mezcla referencias al cine de terror con humor y situaciones absurdas.</p>
-                        <a href="catalogo.html">Ver catálogo</a>
+                        <h2>Terror y suspenso</h2>
+                        <p>Historias de misterio, persecución y situaciones inquietantes.</p>
+                        <a href="catalogo.html?genero=terror">Ver las películas</a>
                     </div>
                 </article>
-                <article class="col-12 col-md-4">
+                <article class="col-12 col-md-6 col-lg-3">
                     <div class="tarjeta h-100">
-                        <img src="img/fauno.jpg" alt="Imagen de El laberinto del fauno" class="img-fluid imagen-tarjeta" loading="lazy">
-                        <h2>Para descubrir un mundo fantástico</h2>
-                        <p>El laberinto del fauno mezcla una historia realista con criaturas y pruebas fantásticas.</p>
-                        <a href="fantasia.html">Ver fantasía oscura</a>
+                        <h2>Fantasía oscura</h2>
+                        <p>Relatos con criaturas, magia y mundos fuera de lo cotidiano.</p>
+                        <a href="catalogo.html?genero=fantasia">Ver las películas</a>
                     </div>
                 </article>
-                <article class="col-12 col-md-4">
+                <article class="col-12 col-md-6 col-lg-3">
                     <div class="tarjeta h-100">
-                        <img src="img/cadaver.jpg" alt="Imagen de El cadáver de la novia" class="img-fluid imagen-tarjeta" loading="lazy">
-                        <h2>Para ver animación gótica</h2>
-                        <p>El cadáver de la novia cuenta una historia de fantasía con un ambiente oscuro.</p>
-                        <a href="catalogo.html">Ver catálogo</a>
+                        <h2>Animación gótica</h2>
+                        <p>Películas animadas con misterio y ambientes oscuros.</p>
+                        <a href="catalogo.html?genero=animacion">Ver las películas</a>
+                    </div>
+                </article>
+                <article class="col-12 col-md-6 col-lg-3">
+                    <div class="tarjeta h-100">
+                        <h2>Comedia de terror</h2>
+                        <p>Películas que combinan sustos, humor y situaciones absurdas.</p>
+                        <a href="catalogo.html?genero=comedia">Ver las películas</a>
                     </div>
                 </article>
             </div>
@@ -65,10 +69,11 @@
 
         <section class="container seccion">
             <div class="row">
-                <div class="col-12 text-center">
-                    <h2>¿Tienes otra recomendación?</h2>
-                    <p>Compártela para que podamos agregarla más adelante.</p>
-                    <a class="btn boton-principal" href="contacto.html">Ir al formulario</a>
+                <div class="col-12">
+                    <h2>Tus películas favoritas</h2>
+                    <p>Las películas que guardes desde el catálogo aparecerán aquí.</p>
+                    <ul id="listaFavoritas" class="lista-favoritas" aria-live="polite"></ul>
+                    <p id="estadoFavoritas" role="status" aria-live="polite"></p>
                 </div>
             </div>
         </section>
