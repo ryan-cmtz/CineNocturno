@@ -1,0 +1,185 @@
+/* Colores principales del sitio */
+:root {
+    --fondo: #100d13;
+    --superficie: #1c1721;
+    --texto: #f1edf3;
+    --acento: #c18bd6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.marca {
+    font-family: "Cinzel", Georgia, serif;
+}
+
+.navbar,
+.pie,
+.tarjeta,
+.formulario {
+    background-color: var(--superficie);
+}
+
+.navbar {
+    padding: 16px 0;
+}
+
+.marca {
+    color: var(--texto);
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.lista-menu {
+    padding-left: 0;
+    list-style: none;
+}
+
+.lista-menu a,
+a {
+    color: var(--acento);
+}
+
+.lista-menu a {
+    text-decoration: none;
+}
+
+.lista-menu a:hover,
+.lista-menu a[aria-current="page"] {
+    color: var(--texto);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.portada,
+.encabezado {
+    background-color: var(--superficie);
+}
+
+.portada h1,
+.encabezado h1 {
+    max-width: 800px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.seccion {
+    padding-top: 42px;
+    padding-bottom: 42px;
+}
+
+.etiqueta,
+.genero {
+    color: var(--acento);
+    font-weight: 600;
+}
+
+.tarjeta,
+.formulario {
+    height: 100%;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.imagen-tarjeta {
+    width: 100%;
+    height: 260px;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+.imagen-destacada {
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+}
+
+.boton-principal,
+.boton-secundario {
+    border: 1px solid var(--acento);
+    background-color: var(--acento);
+    color: var(--fondo);
+    font-weight: 600;
+}
+
+.boton-principal:hover,
+.boton-secundario:hover,
+.boton-secundario.favorita {
+    border-color: var(--texto);
+    background-color: var(--texto);
+    color: var(--fondo);
+}
+
+.campo-oscuro {
+    border-color: var(--acento);
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+.campo-oscuro:focus {
+    border-color: var(--acento);
+    background-color: var(--fondo);
+    color: var(--texto);
+    box-shadow: 0 0 0 0.2rem rgba(193, 139, 214, 0.25);
+}
+
+.campo-oscuro option {
+    background-color: var(--superficie);
+    color: var(--texto);
+}
+
+.tarjeta-pelicula.oculta {
+    display: none;
+}
+
+.mensaje-exito,
+.mensaje-error {
+    padding: 12px;
+    background-color: var(--superficie);
+}
+
+.mensaje-exito {
+    border-left: 5px solid var(--acento);
+}
+
+.mensaje-error {
+    border-left: 5px solid var(--texto);
+}
+
+.pie {
+    margin-top: 24px;
+    padding: 24px 0;
+    text-align: center;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 3px;
+}
+
+@media (max-width: 576px) {
+    .seccion {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    .imagen-tarjeta {
+        height: 220px;
+    }
+}

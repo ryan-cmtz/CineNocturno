@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineNocturno | Recomendaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+                <a class="marca" href="index.html">CineNocturno</a>
+                <ul class="lista-menu d-flex flex-wrap gap-3 mb-0">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="fantasia.html">Fantasía oscura</a></li>
+                    <li><a aria-current="page" href="recomendaciones.html">Recomendaciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="encabezado">
+            <div class="container py-4">
+                <h1>Recomendaciones</h1>
+                <p>Elige una película según el tipo de historia que quieras ver.</p>
+            </div>
+        </section>
+
+        <section class="container seccion">
+            <div class="row g-4">
+                <article class="col-12 col-md-4">
+                    <div class="tarjeta h-100">
+                        <img src="img/scarymovie.jpg" alt="Imagen de Scary Movie" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <h2>Para reír</h2>
+                        <p>Scary Movie mezcla referencias al cine de terror con humor y situaciones absurdas.</p>
+                        <a href="catalogo.html">Ver catálogo</a>
+                    </div>
+                </article>
+                <article class="col-12 col-md-4">
+                    <div class="tarjeta h-100">
+                        <img src="img/fauno.jpg" alt="Imagen de El laberinto del fauno" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <h2>Para descubrir un mundo fantástico</h2>
+                        <p>El laberinto del fauno mezcla una historia realista con criaturas y pruebas fantásticas.</p>
+                        <a href="fantasia.html">Ver fantasía oscura</a>
+                    </div>
+                </article>
+                <article class="col-12 col-md-4">
+                    <div class="tarjeta h-100">
+                        <img src="img/cadaver.jpg" alt="Imagen de El cadáver de la novia" class="img-fluid imagen-tarjeta" loading="lazy">
+                        <h2>Para ver animación gótica</h2>
+                        <p>El cadáver de la novia cuenta una historia de fantasía con un ambiente oscuro.</p>
+                        <a href="catalogo.html">Ver catálogo</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container seccion">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>¿Tienes otra recomendación?</h2>
+                    <p>Compártela para que podamos agregarla más adelante.</p>
+                    <a class="btn boton-principal" href="contacto.html">Ir al formulario</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="container text-center">
+            <p>CineNocturno</p>
+            <p>© <span class="anio"></span> CineNocturno</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
