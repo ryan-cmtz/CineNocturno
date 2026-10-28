@@ -1,9 +1,3 @@
-const anios = document.querySelectorAll(".anio");
-
-anios.forEach(function(anio) {
-    anio.textContent = new Date().getFullYear();
-});
-
 function quitarAcentos(texto) {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
