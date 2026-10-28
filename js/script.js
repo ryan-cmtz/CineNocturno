@@ -37,40 +37,6 @@ if (buscador && filtro) {
     }
 }
 
-let favoritas = JSON.parse(localStorage.getItem("cineNocturnoFavoritas") || "[]");
-const botones = document.querySelectorAll(".boton-favorita");
-const mensajeFavoritas = document.querySelector("#mensajeFavoritas");
-
-botones.forEach(function(boton) {
-    const pelicula = boton.dataset.pelicula;
-
-    if (favoritas.includes(pelicula)) {
-        boton.textContent = "Quitar de favoritas";
-        boton.classList.add("favorita");
-        boton.setAttribute("aria-pressed", "true");
-    }
-
-    boton.addEventListener("click", function() {
-        if (favoritas.includes(pelicula)) {
-            favoritas = favoritas.filter(function(nombre) {
-                return nombre !== pelicula;
-            });
-            boton.textContent = "Guardar en favoritas";
-            boton.classList.remove("favorita");
-            boton.setAttribute("aria-pressed", "false");
-            mensajeFavoritas.textContent = "Película quitada de favoritas.";
-        } else {
-            favoritas.push(pelicula);
-            boton.textContent = "Quitar de favoritas";
-            boton.classList.add("favorita");
-            boton.setAttribute("aria-pressed", "true");
-            mensajeFavoritas.textContent = "Película guardada en favoritas.";
-        }
-
-        localStorage.setItem("cineNocturnoFavoritas", JSON.stringify(favoritas));
-    });
-});
-
 const listaFavoritas = document.querySelector("#listaFavoritas");
 const estadoFavoritas = document.querySelector("#estadoFavoritas");
 
@@ -112,3 +78,4 @@ if (formulario && respuesta) {
             contador.textContent = "0 de 300 caracteres";
         }
     });
+}
