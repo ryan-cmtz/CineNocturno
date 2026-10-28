@@ -11,19 +11,18 @@
 
 body {
     margin: 0;
-    background-color: var(--fondo);
+    background: var(--fondo);
     color: var(--texto);
     font-family: "Poppins", Arial, sans-serif;
     line-height: 1.6;
 }
 
-h1, h2, h3,
-.marca {
+h1, h2, h3, .marca {
     font-family: "Cinzel", Georgia, serif;
 }
 
-.navbar, .pie, .tarjeta, .formulario {
-    background-color: var(--superficie);
+.navbar, .pie, .tarjeta, .formulario, .portada, .encabezado {
+    background: var(--superficie);
 }
 
 .navbar {
@@ -42,7 +41,7 @@ h1, h2, h3,
     list-style: none;
 }
 
-.lista-menu a, a {
+a, .etiqueta, .genero {
     color: var(--acento);
 }
 
@@ -56,22 +55,16 @@ h1, h2, h3,
     text-underline-offset: 5px;
 }
 
-.portada, .encabezado {
-    background-color: var(--superficie);
-}
-
 .portada h1, .encabezado h1 {
     max-width: 800px;
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 .seccion {
-    padding-top: 42px;
-    padding-bottom: 42px;
+    padding: 42px 0;
 }
 
 .etiqueta, .genero {
-    color: var(--acento);
     font-weight: 600;
 }
 
@@ -96,32 +89,29 @@ h1, h2, h3,
 
 .boton-principal, .boton-secundario {
     border: 1px solid var(--acento);
-    background-color: var(--acento);
+    background: var(--acento);
     color: var(--fondo);
     font-weight: 600;
 }
 
 .boton-principal:hover, .boton-secundario:hover, .boton-secundario.favorita {
     border-color: var(--texto);
-    background-color: var(--texto);
+    background: var(--texto);
     color: var(--fondo);
 }
 
-.campo-oscuro {
+.campo-oscuro, .campo-oscuro:focus {
     border-color: var(--acento);
-    background-color: var(--fondo);
+    background: var(--fondo);
     color: var(--texto);
 }
 
 .campo-oscuro:focus {
-    border-color: var(--acento);
-    background-color: var(--fondo);
-    color: var(--texto);
     box-shadow: 0 0 0 0.2rem rgba(193, 139, 214, 0.25);
 }
 
 .campo-oscuro option {
-    background-color: var(--superficie);
+    background: var(--superficie);
     color: var(--texto);
 }
 
@@ -131,7 +121,7 @@ h1, h2, h3,
 
 .mensaje-exito, .mensaje-error {
     padding: 12px;
-    background-color: var(--superficie);
+    background: var(--superficie);
 }
 
 .mensaje-exito {
@@ -159,8 +149,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 @media (max-width: 576px) {
     .seccion {
-        padding-top: 28px;
-        padding-bottom: 28px;
+        padding: 28px 0;
     }
 
     .imagen-tarjeta {
