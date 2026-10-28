@@ -103,7 +103,6 @@ if (listaFavoritas && estadoFavoritas) {
     }
 }
 
-
 const mensaje = document.querySelector("#mensaje");
 const contador = document.querySelector("#contador");
 
