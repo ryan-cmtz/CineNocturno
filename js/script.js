@@ -1,4 +1,3 @@
-/* Filtra las películas del catálogo */
 const buscador = document.querySelector("#buscarPelicula");
 const filtro = document.querySelector("#filtroGenero");
 const tarjetas = document.querySelectorAll(".tarjeta-pelicula");
@@ -38,7 +37,6 @@ if (buscador && filtro) {
     }
 }
 
-/* Guarda las películas favoritas en el navegador */
 let favoritas = JSON.parse(localStorage.getItem("cineNocturnoFavoritas") || "[]");
 const botones = document.querySelectorAll(".boton-favorita");
 const mensajeFavoritas = document.querySelector("#mensajeFavoritas");
@@ -73,7 +71,6 @@ botones.forEach(function(boton) {
     });
 });
 
-/* Muestra las favoritas en la página de recomendaciones */
 const listaFavoritas = document.querySelector("#listaFavoritas");
 const estadoFavoritas = document.querySelector("#estadoFavoritas");
 
@@ -91,7 +88,6 @@ if (listaFavoritas && estadoFavoritas) {
     }
 }
 
-/* Cuenta los caracteres del mensaje */
 const campoMensaje = document.querySelector("#mensaje");
 const contador = document.querySelector("#contador");
 
@@ -101,7 +97,6 @@ if (campoMensaje && contador) {
     });
 }
 
-/* Valida el formulario de contacto */
 const formulario = document.querySelector("#formularioContacto");
 const respuesta = document.querySelector("#respuestaFormulario");
 
