@@ -1,3 +1,4 @@
+/* Filtra las películas del catálogo */
 const buscador = document.querySelector("#buscarPelicula");
 const filtro = document.querySelector("#filtroGenero");
 const tarjetas = document.querySelectorAll(".tarjeta-pelicula");
@@ -37,6 +38,42 @@ if (buscador && filtro) {
     }
 }
 
+/* Guarda las películas favoritas en el navegador */
+let favoritas = JSON.parse(localStorage.getItem("cineNocturnoFavoritas") || "[]");
+const botones = document.querySelectorAll(".boton-favorita");
+const mensajeFavoritas = document.querySelector("#mensajeFavoritas");
+
+botones.forEach(function(boton) {
+    const pelicula = boton.dataset.pelicula;
+
+    if (favoritas.includes(pelicula)) {
+        boton.textContent = "Quitar de favoritas";
+        boton.classList.add("favorita");
+        boton.setAttribute("aria-pressed", "true");
+    }
+
+    boton.addEventListener("click", function() {
+        if (favoritas.includes(pelicula)) {
+            favoritas = favoritas.filter(function(nombre) {
+                return nombre !== pelicula;
+            });
+            boton.textContent = "Guardar en favoritas";
+            boton.classList.remove("favorita");
+            boton.setAttribute("aria-pressed", "false");
+            mensajeFavoritas.textContent = "Película quitada de favoritas.";
+        } else {
+            favoritas.push(pelicula);
+            boton.textContent = "Quitar de favoritas";
+            boton.classList.add("favorita");
+            boton.setAttribute("aria-pressed", "true");
+            mensajeFavoritas.textContent = "Película guardada en favoritas.";
+        }
+
+        localStorage.setItem("cineNocturnoFavoritas", JSON.stringify(favoritas));
+    });
+});
+
+/* Muestra las favoritas en la página de recomendaciones */
 const listaFavoritas = document.querySelector("#listaFavoritas");
 const estadoFavoritas = document.querySelector("#estadoFavoritas");
 
@@ -54,6 +91,17 @@ if (listaFavoritas && estadoFavoritas) {
     }
 }
 
+/* Cuenta los caracteres del mensaje */
+const campoMensaje = document.querySelector("#mensaje");
+const contador = document.querySelector("#contador");
+
+if (campoMensaje && contador) {
+    campoMensaje.addEventListener("input", function() {
+        contador.textContent = campoMensaje.value.length + " de 300 caracteres";
+    });
+}
+
+/* Valida el formulario de contacto */
 const formulario = document.querySelector("#formularioContacto");
 const respuesta = document.querySelector("#respuestaFormulario");
 
