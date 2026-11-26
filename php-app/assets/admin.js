@@ -22,6 +22,13 @@ function escapar(texto) {
 
 formularioPelicula.addEventListener("submit", async function(evento) {
     evento.preventDefault();
+    const editorSinopsis = $("#sinopsis");
+    const campoSinopsis = document.querySelector("#sinopsis");
+    campoSinopsis.value = editorSinopsis.summernote("code");
+    if (editorSinopsis.summernote("isEmpty")) {
+        await Swal.fire("Falta la sinopsis", "Escribe una sinopsis antes de guardar.", "warning");
+        return;
+    }
     const respuesta = await fetch(apiPeliculas, {method:"POST", headers:{"X-CSRF-Token":token}, body:new FormData(formularioPelicula)});
     const resultado = await respuesta.json();
     await Swal.fire(resultado.ok ? "Listo" : "Revisa los datos", resultado.mensaje, resultado.ok ? "success" : "error");
