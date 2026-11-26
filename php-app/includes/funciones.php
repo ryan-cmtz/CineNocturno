@@ -7,9 +7,17 @@ function escapar($texto) {
     return htmlspecialchars((string)$texto, ENT_QUOTES, 'UTF-8');
 }
 
+function rutaAplicacion() {
+    $carpeta = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '/'));
+    if (in_array(basename($carpeta), ['admin', 'api'], true)) {
+        $carpeta = dirname($carpeta);
+    }
+    return rtrim($carpeta, '/');
+}
+
 function requiereSesion() {
     if (empty($_SESSION['usuario'])) {
-        header('Location: ../login.php');
+        header('Location: ' . rutaAplicacion() . '/login.php');
         exit;
     }
 }
