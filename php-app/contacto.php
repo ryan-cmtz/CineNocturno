@@ -1,0 +1,9 @@
+<?php
+require __DIR__ . '/config/database.php';
+require __DIR__ . '/includes/funciones.php';
+$tituloPagina = 'Contacto';
+$paginaActiva = 'contacto';
+require __DIR__ . '/includes/cabecera.php';
+?>
+<section class="encabezado"><div class="container py-4"><h1>Contacto</h1><p>Comparte una recomendación para CineNocturno.</p></div></section><section class="container seccion"><div class="row justify-content-center"><div class="col-12 col-lg-8"><form id="formularioContacto" class="formulario"><label class="form-label" for="nombreContacto">Tu nombre</label><input class="form-control campo-oscuro mb-3" id="nombreContacto" name="nombre" minlength="2" maxlength="60" required><label class="form-label" for="correoContacto">Correo electrónico</label><input class="form-control campo-oscuro mb-3" id="correoContacto" name="correo" type="email" required><label class="form-label" for="tipoContacto">¿Qué quieres compartir?</label><select class="form-select campo-oscuro mb-3" id="tipoContacto" name="tipo" required><option value="">Selecciona una opción</option><option>Sugerir una película</option><option>Compartir una opinión</option><option>Hacer una pregunta</option></select><label class="form-label" for="mensajeContacto">Mensaje</label><textarea class="form-control campo-oscuro mb-3" id="mensajeContacto" name="mensaje" rows="5" minlength="10" maxlength="300" required></textarea><small id="contadorContacto">0 de 300 caracteres</small><button class="btn boton-principal d-block mt-3" type="submit">Enviar</button><p id="respuestaContacto" role="status" aria-live="polite"></p></form></div></div></section>
+<?php require __DIR__ . '/includes/pie.php'; ?>

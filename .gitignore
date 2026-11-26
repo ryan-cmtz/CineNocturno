@@ -1,0 +1,3 @@
+# Archivos que se crean al usar la aplicación
+php-app/uploads/*
+!php-app/uploads/.htaccess
